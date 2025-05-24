@@ -1,0 +1,276 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {"sequelize_performance_summary_2025-05-23T10-39-43-741Z.csv":false};
+        var gk_fileData = {"sequelize_performance_summary_2025-05-23T10-39-43-741Z.csv":"Query,Avg (ms),Median (ms),Min (ms),Max (ms),Rows\n\"Select all from appointments\",2.18,1.77,1.44,8.99,20\n\"Count rows in appointments\",1.35,1.19,1.02,4.13,1\n\"Order by id in appointments\",1.79,1.63,1.40,4.45,20\n\"Filter by reason in appointments\",1.92,1.71,1.51,4.88,15\n\"Filter by appointment_date in appointments\",1.90,1.65,1.38,5.42,7\n\"Select all from doctor_availability\",1.33,1.12,0.97,3.31,1\n\"Count rows in doctor_availability\",1.08,1.01,0.88,1.71,1\n\"Order by id in doctor_availability\",1.23,1.16,1.05,2.01,1\n\"Filter by start_time in doctor_availability\",1.43,1.41,1.20,2.26,1\n\"Select all from loyalty_cards\",1.18,1.10,0.97,2.84,1\n\"Count rows in loyalty_cards\",0.99,0.96,0.77,1.36,1\n\"Order by id in loyalty_cards\",1.18,1.11,0.97,2.07,1\n\"Filter by createdAt in loyalty_cards\",1.32,1.27,1.10,1.66,1\n\"Select all from loyalty_packages\",1.29,1.12,0.98,3.55,4\n\"Count rows in loyalty_packages\",2.51,2.47,1.90,3.52,1\n\"Order by id in loyalty_packages\",1.15,1.13,1.00,1.32,4\n\"Filter by name in loyalty_packages\",1.29,1.24,1.08,1.61,4\n\"Filter by createdAt in loyalty_packages\",1.43,1.33,1.06,2.81,4\n\"Select all from loyalty_redemptions\",1.14,0.98,0.86,3.10,0\n\"Count rows in loyalty_redemptions\",1.07,1.05,0.79,1.59,1\n\"Order by id in loyalty_redemptions\",1.06,1.00,0.89,1.76,0\n\"Filter by redemption_date in loyalty_redemptions\",1.27,1.24,1.03,1.84,0\n\"Select all from medical_records\",1.38,1.23,1.11,2.93,16\n\"Count rows in medical_records\",0.94,0.93,0.79,1.24,1\n\"Order by id in medical_records\",1.48,1.40,1.17,2.38,16\n\"Filter by diagnosis in medical_records\",1.45,1.41,1.17,1.99,11\n\"Filter by date in medical_records\",1.53,1.50,1.25,1.85,16\n\"Select all from medical_tests\",1.46,1.30,1.09,3.19,15\n\"Count rows in medical_tests\",1.02,0.97,0.75,1.77,1\n\"Order by id in medical_tests\",1.50,1.48,1.10,2.16,15\n\"Filter by test_name in medical_tests\",1.37,1.25,1.08,2.55,9\n\"Filter by test_date in medical_tests\",1.43,1.32,1.18,2.02,10\n\"Select all from test_parameters\",1.09,0.97,0.86,2.37,0\n\"Count rows in test_parameters\",0.90,0.86,0.78,1.15,1\n\"Order by id in test_parameters\",1.01,0.98,0.89,1.41,0\n\"Filter by parameter_name in test_parameters\",1.18,1.14,0.98,1.60,0\n\"Filter by createdAt in test_parameters\",1.37,1.23,1.05,3.32,0\n\"Select all from user_profiles\",1.47,1.31,1.09,3.52,18\n\"Count rows in user_profiles\",0.93,0.87,0.78,1.25,1\n\"Order by id in user_profiles\",1.93,1.69,1.14,5.42,18\n\"Filter by first_name in user_profiles\",1.61,1.42,1.25,2.99,16\n\"Filter by date_of_birth in user_profiles\",1.74,1.64,1.26,2.59,15\n\"Select all from users\",1.11,0.99,0.88,2.55,24\n\"Count rows in users\",0.77,0.69,0.59,1.51,1\n\"Order by id in users\",1.15,1.12,0.92,1.43,24\n\"Filter by email in users\",1.30,1.28,1.13,1.74,22\n\"Filter by createdAt in users\",1.38,1.35,1.21,1.65,24\n\"Select all from visitor_appointments\",1.21,1.08,0.93,2.55,8\n\"Count rows in visitor_appointments\",2.15,2.17,1.71,2.66,1\n\"Order by id in visitor_appointments\",1.16,1.18,1.01,1.37,8\n\"Filter by firstName in visitor_appointments\",1.22,1.20,1.08,1.56,7\n\"Filter by preferredDate in visitor_appointments\",1.29,1.27,1.02,1.80,7\n\"Select all from visitor_medical_tests\",1.04,0.94,0.83,1.99,0\n\"Count rows in visitor_medical_tests\",0.83,0.82,0.71,1.14,1\n\"Order by id in visitor_medical_tests\",0.99,0.94,0.82,1.24,0\n\"Filter by visitor_email in visitor_medical_tests\",1.28,1.06,0.93,2.93,0\n\"Filter by test_date in visitor_medical_tests\",1.19,1.15,1.03,1.85,0\n\"Select all from visitor_test_parameters\",0.96,0.87,0.82,2.11,0\n\"Count rows in visitor_test_parameters\",0.86,0.81,0.73,1.23,1\n\"Order by id in visitor_test_parameters\",1.07,0.97,0.86,2.60,0\n\"Filter by parameter_name in visitor_test_parameters\",1.04,0.99,0.88,1.96,0\n\"Filter by createdAt in visitor_test_parameters\",1.05,1.02,0.82,1.60,0\n\"Aggregate id by status in appointments\",1.10,1.00,0.81,2.37,2\n\"Aggregate id by status in loyalty_redemptions\",0.90,0.87,0.75,1.44,0\n\"Join medical_records with users\",1.58,1.46,1.21,2.70,16\n\"Aggregate id by test_category in medical_tests\",1.15,1.06,0.93,2.58,4\n\"Join user_profiles with users\",1.51,1.37,1.22,3.53,18\n\"Aggregate id by status in visitor_appointments\",1.04,1.00,0.85,1.63,2\n\"Aggregate id by test_category in visitor_medical_tests\",0.94,0.90,0.71,1.36,0"};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panou de Control Performanță Sequelize</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+  <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chrono-node/1.3.11/chrono.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.15.0/Recharts.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div id="root"></div>
+  <script type="text/babel">
+    // Inițializarea rădăcinii React
+    const { createRoot } = ReactDOM;
+    const root = createRoot(document.getElementById('root'));
+
+    // Definirea componentei principale Panou de Control
+    function PanouDeControl() {
+      const [date, setDate] = React.useState([]);
+      const [incarcare, setIncarcare] = React.useState(true);
+
+      // Încărcarea și procesarea datelor CSV
+      React.useEffect(() => {
+        const csv = loadFileData("sequelize_performance_summary_2025-05-23T10-39-43-741Z.csv");
+        Papa.parse(csv, {
+          header: true,
+          skipEmptyLines: true,
+          transformHeader: (header) => header.trim().replace(/^"|"$/g, ''),
+          transform: (value, header) => {
+            let curatat = value.trim().replace(/^"|"$/g, '');
+            if (['Avg (ms)', 'Median (ms)', 'Min (ms)', 'Max (ms)', 'Rows'].includes(header)) {
+              return isNaN(curatat) || curatat === '' ? 0 : parseFloat(curatat);
+            }
+            return curatat;
+          },
+          complete: (results) => {
+            const dateCuratate = results.data.map(row => ({
+              ...row,
+              Tabel: row['Query'].split(' from ')[1]?.split(' ')[0] || row['Query'].split(' in ')[1]?.split(' ')[0] || 'Altele',
+              TipInterogare: row['Query'].includes('Select all') ? 'SELECT ALL'
+                           : row['Query'].includes('Count rows') ? 'NUMĂRĂ RÂNDURI'
+                           : row['Query'].includes('Order by') ? 'ORDONARE'
+                           : row['Query'].includes('Filter by') ? 'FILTRARE'
+                           : row['Query'].includes('Aggregate') ? 'AGREGARE'
+                           : row['Query'].includes('Join') ? 'ÎMBINARE' : 'Altele'
+            }));
+            setDate(dateCuratate);
+            setIncarcare(false);
+          },
+          error: (err) => {
+            console.error(err);
+            setIncarcare(false);
+          }
+        });
+      }, []);
+
+      // Pregătirea datelor pentru vizualizări
+      const tabele = [...new Set(date.map(row => row.Tabel))];
+      const timpMediuPeTabel = tabele.map(tabel => {
+        const dateTabel = date.filter(row => row.Tabel === tabel);
+        return {
+          tabel,
+          timpMediu: dateTabel.reduce((sum, row) => sum + row['Avg (ms)'], 0) / dateTabel.length
+        };
+      }).sort((a, b) => b.timpMediu - a.timpMediu);
+
+      const numarTipuriInterogari = ['SELECT ALL', 'NUMĂRĂ RÂNDURI', 'ORDONARE', 'FILTRARE', 'AGREGARE', 'ÎMBINARE'].map(tip => ({
+        tip,
+        numar: date.filter(row => row.TipInterogare === tip).length
+      }));
+
+      const interogariLente = date
+        .sort((a, b) => b['Avg (ms)'] - a['Avg (ms)'])
+        .slice(0, 5)
+        .map(row => ({
+          Interogare: row['Query'],
+          Tabel: row.Tabel,
+          TimpMediu: row['Avg (ms)'].toFixed(2),
+          TimpMaxim: row['Max (ms)'].toFixed(2),
+          Rânduri: row.Rows
+        }));
+
+      // Randarea stării de încărcare
+      if (incarcare) {
+        return (
+          <div className="flex justify-center items-center h-screen">
+            <div className="text-2xl">Se încarcă...</div>
+          </div>
+        );
+      }
+
+      // Randarea panoului de control
+      return (
+        <div className="container mx-auto p-6">
+          <h1 className="text-3xl font-bold mb-6 text-center">Panou de Control Performanță Sequelize</h1>
+
+          {/* Secțiunea Rezumat */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Rezumat</h2>
+            <p>Setul de date conține metrici de performanță pentru {date.length} interogări pe {tabele.length} tabele. Timpul mediu de interogare variază de la 0.77 ms la 2.51 ms, tabelul `appointments` având cei mai mari timpi medii de interogare. În mod notabil, interogarea „Numărați rândurile din loyalty_packages” este neobișnuit de lentă (2.51 ms) pentru doar 1 rând returnat, sugerând o oportunitate de optimizare.</p>
+          </div>
+
+          {/* Timp Mediu de Interogare pe Tabel */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Timp Mediu de Interogare pe Tabel</h2>
+            <div className="bg-gray-800 p-4 rounded-lg">
+              <Recharts.ResponsiveContainer width="100%" height={400}>
+                <Recharts.BarChart data={timpMediuPeTabel}>
+                  <Recharts.CartesianGrid strokeDasharray="3 3" stroke="#444" />
+                  <Recharts.XAxis dataKey="tabel" angle={-45} textAnchor="end" stroke="#fff" fontSize={12} />
+                  <Recharts.YAxis label={{ value: 'Timp Mediu (ms)', angle: -90, position: 'insideLeft', fill: '#fff', fontSize: 12 }} stroke="#fff" fontSize={12} />
+                  <Recharts.Tooltip contentStyle={{ backgroundColor: '#333', border: 'none', fontSize: 12 }} />
+                  <Recharts.Bar dataKey="timpMediu" fill="#3b82f6" />
+                </Recharts.BarChart>
+              </Recharts.ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Distribuția Timpilor de Interogare */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Distribuția Timpilor de Interogare pe Tabel</h2>
+            <div className="bg-gray-800 p-4 rounded-lg">
+              <Recharts.ResponsiveContainer width="100%" height={400}>
+                <Recharts.LineChart data={date}>
+                  <Recharts.CartesianGrid strokeDasharray="3 3" stroke="#444" />
+                  <Recharts.XAxis dataKey="Tabel" angle={-45} textAnchor="end" stroke="#fff" fontSize={12} />
+                  <Recharts.YAxis label={{ value: 'Timp (ms)', angle: -90, position: 'insideLeft', fill: '#fff', fontSize: 12 }} stroke="#fff" fontSize={12} />
+                  <Recharts.Tooltip contentStyle={{ backgroundColor: '#333', border: 'none', fontSize: 12 }} />
+                  <Recharts.Line type="monotone" dataKey="Min (ms)" stroke="#34d399" name="Minim" />
+                  <Recharts.Line type="monotone" dataKey="Median (ms)" stroke="#3b82f6" name="Mediană" />
+                  <Recharts.Line type="monotone" dataKey="Max (ms)" stroke="#ef4444" name="Maxim" />
+                  <Recharts.Legend />
+                </Recharts.LineChart>
+              </Recharts.ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Număr de Rânduri vs. Timp de Interogare */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Număr de Rânduri vs. Timp Mediu de Interogare</h2>
+            <div className="bg-gray-800 p-4 rounded-lg">
+              <Recharts.ResponsiveContainer width="100%" height={400}>
+                <Recharts.ScatterChart>
+                  <Recharts.CartesianGrid strokeDasharray="3 3" stroke="#444" />
+                  <Recharts.XAxis dataKey="Rows" type="number" name="Rânduri" label={{ value: 'Rânduri Returnate', position: 'insideBottom', fill: '#fff', fontSize: 12 }} stroke="#fff" fontSize={12} />
+                  <Recharts.YAxis dataKey="Avg (ms)" type="number" name="Timp Mediu" label={{ value: 'Timp Mediu (ms)', angle: -90, position: 'insideLeft', fill: '#fff', fontSize: 12 }} stroke="#fff" fontSize={12} />
+                  <Recharts.Tooltip contentStyle={{ backgroundColor: '#333', border: 'none', fontSize: 12 }} />
+                  <Recharts.Scatter name="Interogări" data={date} fill="#3b82f6" />
+                </Recharts.ScatterChart>
+              </Recharts.ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Distribuția Tipurilor de Interogări */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Distribuția Tipurilor de Interogări</h2>
+            <div className="bg-gray-800 p-4 rounded-lg">
+              <Recharts.ResponsiveContainer width="100%" height={400}>
+                <Recharts.PieChart>
+                  <Recharts.Pie
+                    data={numarTipuriInterogari}
+                    dataKey="numar"
+                    nameKey="tip"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={150}
+                    fill="#3b82f6"
+                    label={{ fill: '#fff', fontSize: 12 }}
+                  >
+                    {numarTipuriInterogari.map((entry, index) => (
+                      <Recharts.Cell key={`cell-${index}`} fill={['#3b82f6', '#34d399', '#ef4444', '#f59e0b', '#8b5cf6', '#ec4899'][index % 6]} />
+                    ))}
+                  </Recharts.Pie>
+                  <Recharts.Tooltip contentStyle={{ backgroundColor: '#333', border: 'none', fontSize: 12 }} />
+                  <Recharts.Legend />
+                </Recharts.PieChart>
+              </Recharts.ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Tabel Interogări Lente */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Top 5 Interogări Lente</h2>
+            <div className="bg-gray-800 p-4 rounded-lg overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="bg-gray-700">
+                    <th className="p-2">Interogare</th>
+                    <th className="p-2">Tabel</th>
+                    <th className="p-2">Timp Mediu (ms)</th>
+                    <th className="p-2">Timp Maxim (ms)</th>
+                    <th className="p-2">Rânduri</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {interogariLente.map((row, index) => (
+                    <tr key={index} className="border-t border-gray-600">
+                      <td className="p-2">{row.Interogare}</td>
+                      <td className="p-2">{row.Tabel}</td>
+                      <td className="p-2">{row.TimpMediu}</td>
+                      <td className="p-2">{row.TimpMaxim}</td>
+                      <td className="p-2">{row.Rânduri}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Fapt Interesant */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Fapt Interesant</h2>
+            <p className="bg-yellow-900 p-4 rounded-lg">
+              Interogarea „Numărați rândurile din loyalty_packages” iese în evidență ca fiind neobișnuit de lentă, cu un timp mediu de execuție de 2.51 ms, deși returnează doar 1 rând. Aceasta este mai lentă decât multe interogări care returnează semnificativ mai multe rânduri, cum ar fi „Selectați toate din users” (1.11 ms, 24 rânduri). Acest lucru sugerează o posibilă problemă de indexare sau un plan de execuție ineficient pentru tabelul `loyalty_packages`.
+            </p>
+          </div>
+
+          {/* Concluzie */}
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Concluzie</h2>
+            <p>Interogările pe tabelul `appointments` sunt cele mai lente, probabil datorită numărului mai mare de rânduri și operațiunilor complexe. Interogările `NUMĂRĂ RÂNDURI` sunt în general cele mai rapide, în timp ce interogările `SELECT ALL` și `ORDONARE` prezintă o variabilitate mai mare. Interogarea „Numărați rândurile din loyalty_packages” este o anomalie notabilă, care merită investigată în continuare pentru optimizarea indexării sau a schemei. Luați în considerare optimizarea interogărilor pe tabelele cu multe rânduri, cum ar fi `users` și `user_profiles`, pentru a îmbunătăți performanța generală a bazei de date.</p>
+          </div>
+        </div>
+      );
+    }
+
+    // Randarea componentei Panou de Control
+    root.render(<PanouDeControl />);
+  </script>
+</body>
+</html>
